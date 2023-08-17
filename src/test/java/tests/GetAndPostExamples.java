@@ -22,7 +22,7 @@ public class GetAndPostExamples {
 		given()
 			.get("/users?page=2").
 		then().
-				
+
 			statusCode(200).
 			body("data[4].first_name", equalTo("George"))
 			.body("data.first_name", hasItems("George" , "Rachel"))
